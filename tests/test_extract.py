@@ -5,7 +5,7 @@ import rank.helper as h
 class TestListElements(unittest.TestCase):
 
     def setUp(self):
-        self.input = "./data/sample-input-test.txt"
+        self.input = "./tests/test-input.txt"
         self.expected = [[['Astralis', 2], ['Ninjas in Pyjamas', 1]],
                         [['Astralis', 1], ['Navi', 1]],
                         [['Navi', 2], ['G2 Esports', 0]],

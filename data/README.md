@@ -12,7 +12,7 @@ a rather small task, it should be approached as you would an actual task for a
 customer.
 
 We would like to see some architecture, but only as much as reasonable.
-Your code shuold be easily extensible without burdensome abstractions.
+Your code should be easily extensible without burdensome abstractions.
 
 ### When you are finished
 

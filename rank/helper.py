@@ -1,105 +1,83 @@
 import numpy as np
 
 
-# Test made
 def extract(input_file):
     '''
     Extract phase: extract data from input text file
     '''
-    print("Extract phase Started")
+    print("- Extract phase Started")
     data = []
-    try:
-        with open(input_file) as f:
-            lines = f.readlines()
+    with open(input_file) as f:
+        lines = f.readlines()
 
-            for line in lines:
-                # Extract match information from each line
-                match = extract_match_info(line)
-                data.append(match)
+        for line in lines:
+            # Extract match information from each line
+            match = extract_match_info(line)
+            data.append(match)
 
-    except Exception as e:
-        print("Error: failed to perform actions on file.")
-
-    print("Extract phase Ended")
+    print("- Extract phase Ended")
 
     return data
 
 
-# Test made
 def transform(data):
     '''
     Transform phase: transform data to the required format
     '''
-    print("Transform phase Started")
+    print("- Transform phase Started")
 
-    try:
-        # Check if data are empty
-        if len(data) == 0:
-            print("Error: Data are empty")
+    # Create point table dictionary
+    point_table = create_table_dict(data)  
 
-            return None
+    # Add points to team based on matches' result
+    for match in data:
+        _ = point_analysis(point_table, match)
 
-        # Create point table dictionary
-        point_table = create_table_dict(data)  
+    # Sort table base on points, alphabetically
+    sorted_point_table = sort_point_table(point_table)
 
-        # Add points to team based on matches' result
-        for match in data:
-            _ = point_analysis(point_table, match)
+    # Add ranks to team base on points
+    final_table = rank_table(sorted_point_table)
 
-        # Sort table base on points, alphabetically
-        sorted_point_table = sort_point_table(point_table)
+    print("- Transform phase Ended")
 
-        # Add ranks to team base on points
-        final_table = rank_table(sorted_point_table)
-
-        print("Transform phase Ended")
-
-        return final_table
+    return final_table
     
-    except Exception:
-        print("Error: Transform phase error.")
-
-        return None
-
 
 def load(data):
     '''
     Load phase: export data to the output text file
     '''
-    print("Load phase Started")
-    try:
-        with open('./data/sample-output.txt', 'w') as f:
-            for item in data:
-                name, point, rank = item
+    print("- Load phase Started")
 
-                # Decision for 'pts' or 'pt'
-                pt = 'pt' if point == 1 else 'pts'
+    with open('./data/generated-output.txt', 'w') as f:
+        for item in data:
+            name, point, rank = item
 
-                # Forming line's content
-                line = ("{}. {}, {} {}".format(rank, name, point, pt))
-                f.write(line + '\n')
+            # Decision for 'pts' or 'pt'
+            pt = 'pt' if point == 1 else 'pts'
 
-    except Exception:
-        print("Error: Failed to write to file.")
+            # Forming line's content
+            line = ("{}. {}, {} {}".format(rank, name, point, pt))
+            f.write(line + '\n')
 
-    print("Load phase Ended")
+    print("- Load phase Ended")
     
 
-# Test made
 def extract_team_info(team):
     '''
     Extract team name and score from the input information
     '''
     # Split the words to get the score and name parts
-    team_name_parts, team_score = team.split()[:-1], team.split()[-1]
-
+    team_name_parts = team.split()[:-1]
+    team_score = team.split()[-1]
+    
     # Join the name parts to get team name
     team_name = ' '.join(team_name_parts)
 
     return [team_name, int(team_score)]
 
 
-# Test made
 def extract_match_info(match):
     '''
     Extract teams' names and scores from the input match
@@ -111,7 +89,6 @@ def extract_match_info(match):
     return [[team1_name, team1_score], [team2_name, team2_score]]
 
 
-# Test made
 def create_table_dict(data):
     data_table = np.array(data)
 
@@ -135,7 +112,6 @@ def create_table_dict(data):
     return table
 
 
-# Test made
 def point_analysis(table_dict, match):
     '''
     Calculate points to be assigned to each team for the input match
@@ -166,7 +142,6 @@ def point_analysis(table_dict, match):
     return table_dict
 
 
-# Test made
 def sort_point_table(dict):
     '''
     Sort the point table based on points (high to low), alphabetically
@@ -177,7 +152,6 @@ def sort_point_table(dict):
     return table_list
 
 
-# Test made
 def rank_table(table):
     '''
     Add rank to teams based on their points
@@ -198,17 +172,26 @@ def rank_table(table):
 
 
 def generate(input_file):
-    # Extract
-    matches = extract(input_file)
+    try:
+        # Extract
+        matches = extract(input_file)
 
-    # Transform
-    final_table = transform(matches)
+        # Transform
+        final_table = transform(matches)
 
-    # Load
-    load(final_table)
+        # Load
+        load(final_table)
 
-    # print("-- RESULT -----------------------------------------")
-    # for item in final_table:
-    #     name, point, rank = item
-    #     pt = 'pt' if point == 1 else 'pts'
-    #     print("{}. {}, {} {}".format(rank, name, point, pt))
+    except ValueError as value_err:
+        print("- Error: wrong data format.")
+
+    except IndexError as index_err:
+        print("- Error: wrong data format.")
+    
+    except FileNotFoundError as fnf_err:
+        print("- Error: file not found.")
+
+    except Exception as e:
+        print("- Error: unknown error.")
+    
+    
