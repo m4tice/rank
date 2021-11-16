@@ -4,8 +4,12 @@ Supported OS: Linux
 
 # how to run
 Clone the repository and run the following lines: 
+* Activate the virtual environment:
 ```
 source .\venv\bin\activate
+```
+* Generate the ranked table:  
+```
 rank -i <input_file.txt>
 ```
 Example:  
