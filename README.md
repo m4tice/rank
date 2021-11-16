@@ -19,9 +19,9 @@ rank -i data\sample-input.txt
 
 # Application architecture  
 The application is designed to be an ETL pipeline with 3 phases:
-* Extract: extract data from the input text file and put them into a list  
-* Transform: transform the extracted data to the required format  
-* Load: load the result into a text file  
+* *Extract*: extract data from the input text file and put them into a list  
+* *Transform*: transform the extracted data to the required format  
+* *Load*: load the result into a text file  
 
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/rank_structure.png" width="700">
