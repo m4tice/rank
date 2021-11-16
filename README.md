@@ -29,7 +29,7 @@ The application is designed to be a ETL pipeline with 3 phases:
 
 # Extract  
 The phase mainly deals with string manipulation. The goal is to transform the raw data into structured data (in form of rows and columns).  
-The sub functions of this phase:
+The sub-functions of this phase:
 * ```extract_match_info()```: used to split teams' names and scores and put into a list.  
 * ```extract_team_info()```:  used to support ```extract_match_info()```.  \
 
@@ -84,4 +84,10 @@ You can run the following, which covers all test cases :)
 ```
 python tests\test_cli.py
 ```
-The tests directory contains the test scripts for all the functions and sub functions of this application.
+The tests directory contains the test scripts for all the functions and sub-functions of this application.
+Example:
+```
+python tests\test_extract.py
+python tests\test_transform.py
+python tests\test_load.py
+```
