@@ -37,7 +37,7 @@ The sub functions of this phase:
 The phase mainly deals with data transformation. The goal is to create a point table and add the points based on matches and predefined rule, and rank them from high to low, alphabetically.  
 
 The workflow is as follow:
-* First, we gather the unique teams' names based on matches and create a point_table dictionary. The dictionary is chosen for the purpose of quick access of an item.  
+* First, we gather the unique teams' names based on matches and create a point_table dictionary. The dictionary is chosen for the purpose of quick access of a specific item.  
 * Second, we adding points to point_table dictionary based on input matches (3pts win and 1pt draw).  
 * Third, we sort the point_table based on points, alphabetically.
 * Finally, we add rank to teams based on points.
