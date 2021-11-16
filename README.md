@@ -1,5 +1,5 @@
 # rank
-A CLI application that produces a point table based on matches.
+A CLI application that produces a point table based on matches.  
 Supported OS: Linux  
 
 # how to run
@@ -7,6 +7,10 @@ Clone the repository and run the following lines:
 ```
 source .\venv\bin\activate
 rank -i <input_file.txt>
+```
+Example:  
+```
+rank -i data\sample-input.txt  
 ```
 
 # Application architecture  
