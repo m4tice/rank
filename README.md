@@ -102,5 +102,4 @@ Example:
 ```
 python tests/test_extract.py
 python tests/test_transform.py
-python tests/test_load.py
 ```
