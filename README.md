@@ -34,11 +34,26 @@ The sub functions of this phase:
 </p>
 
 # Transforms  
+The phase mainly deals with data transformation. The goal is to create a point table and add the points based on matches and predefined rule, and rank them from high to low, alphabetically.  
+
+The workflow is as follow:
+* First, we gather the unique teams' names based on matches and create a point_table dictionary. The dictionary is chosen for the purpose of quick access of an item.  
+* Second, we adding points to point_table dictionary based on input matches (3pts win and 1pt draw).  
+* Third, we sort the point_table based on points, alphabetically.
+* Finally, we add rank to teams based on points.
+
+The sub functions of this phase:
+* ```create_table_dict()```: create point_table dictionary.  
+* ```point_analysis()```: add points to point_table.  
+* ```sort_point_table()```: sort point_table.  
+* ```rank_table()```: add ranks to point_table.  
+* 
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/transform.png" width="700">
 </p>
 
 # Load  
+This is the final phase, used to export the sorted rank table into a text file named ```generated_output.txt``` in the ```data``` directory.  
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/load.png" width="700">
 </p>
