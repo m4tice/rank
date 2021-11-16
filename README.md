@@ -18,7 +18,7 @@ Supported OS: **Linux** only
 Clone the repository and run the following lines: 
 * Activate the virtual environment:
 ```
-source .\venv\bin\activate
+source ./venv/bin/activate
 ```
 * Generate the ranked table:  
 ```
@@ -26,7 +26,7 @@ rank -i <input_file.txt>
 ```
 Example:  
 ```
-rank -i data\sample-input.txt  
+rank -i data/sample-input.txt  
 ```
 
 # Application architecture  
@@ -79,27 +79,27 @@ The application is able to handle the following exception:
 * *Non-exsisted file*: when user tries to input a non-exsisted file.  
 Test:
 ```
-rank -i data\unknown.txt  
+rank -i data/unknown.txt  
 ```
 * *Empty file*: when user tries to input an empty text file.  
 Test:
 ```
-rank -i data\sample-input-empty.txt  
+rank -i data/sample-input-empty.txt  
 ```
 * *Wrong data format*: when user tries to input text file with wrong data format.  
 Test:
 ```
-rank -i data\sample-input-wrong-format.txt  
+rank -i data/sample-input-wrong-format.txt  
 ```
 OR  
 You can run the following, which covers all test cases :)  
 ```
-python tests\test_cli.py
+python tests/test_cli.py
 ```
 The tests directory contains the test scripts for all the functions and sub-functions of this application.
 Example:
 ```
-python tests\test_extract.py
-python tests\test_transform.py
-python tests\test_load.py
+python tests/test_extract.py
+python tests/test_transform.py
+python tests/test_load.py
 ```
