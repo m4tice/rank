@@ -79,9 +79,8 @@ Test:
 ```
 rank -i data\sample-input-wrong-format.txt  
 ```
-OR
+OR  
 You can run the following, which covers all test cases :)  
-Test:
 ```
 python tests\test_cli.py
 ```
