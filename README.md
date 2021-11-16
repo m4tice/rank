@@ -47,7 +47,7 @@ The sub functions of this phase:
 * ```point_analysis()```: add points to point_table.  
 * ```sort_point_table()```: sort point_table.  
 * ```rank_table()```: add ranks to point_table.  
-* 
+
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/transform.png" width="700">
 </p>
