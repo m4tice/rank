@@ -1,6 +1,18 @@
 # rank
 A CLI application that produces a point table based on matches.  
-Supported OS: Linux  
+Supported OS: Linux only  
+
+# Project architecture
+    .
+    ├── ...
+    ├── rank
+    │   ├── ...
+    │   ├── rank  <-- main cli          
+    │   ├── test  <-- test scripts           
+    │   ├── venv  <-- virtual environment                    
+    │   ├── data  <-- directory for input and output text files                    
+    │   └── requirements.txt               
+    └── ...
 
 # how to run
 Clone the repository and run the following lines: 
