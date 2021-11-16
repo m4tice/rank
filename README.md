@@ -84,4 +84,4 @@ You can run the following, which covers all test cases :)
 ```
 python tests\test_cli.py
 ```
-
+The tests directory contains the test scripts for all the functions and sub functions of this application.
