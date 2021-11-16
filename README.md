@@ -1,15 +1,14 @@
 # rank
 A CLI application that produces a point table based on matches
 
-# Run website
+# how to run
+Clone the repository and run the following lines: 
 ```
-cd .\ecomenv\  
-.\Scripts\activate  
-cd ..\ecomsite\  
-python manage.py runserver  
+source .\venv\bin\activate
+rank -i <input_file.txt>
 ```
 
-# Schema
+# Application architecture  
 <p align="center">
   <img src="https://github.com/m4tice/ecom/blob/main/assets/store_schema.png" width="600">
 </p>
