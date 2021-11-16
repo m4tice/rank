@@ -25,6 +25,10 @@ The application is designed to be a ETL pipeline with 3 phases:
 
 # Extract  
 The phase mainly deals with string manipulation. The goal is to transform the raw data into structured data (in form of rows and columns).  
+The sub functions of this phase:
+* ```extract_match_info()```:  
+* ```extract_team_info()```:  
+
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/extract.png" width="700">
 </p>
