@@ -31,7 +31,7 @@ The application is designed to be an ETL pipeline with 3 phases:
 The phase mainly deals with string manipulation. The goal is to transform the raw data into structured data (in form of rows and columns).  
 The sub-functions of this phase:
 * ```extract_match_info()```: used to split teams' names and scores and put into a list.  
-* ```extract_team_info()```:  used to support ```extract_match_info()```.  \
+* ```extract_team_info()```:  used to support ```extract_match_info()```.  
 
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/extract.png" width="700">
