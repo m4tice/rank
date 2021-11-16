@@ -70,11 +70,19 @@ Test:
 rank -i data\unknown.txt  
 ```
 * Empty file: when user tries to input an empty text file.  
+Test:
 ```
 rank -i data\sample-input-empty.txt  
 ```
 * Wrong data format: when user tries to input text file with wrong data format.  
+Test:
 ```
 rank -i data\sample-input-wrong-format.txt  
+```
+OR
+You can run the following, which covers all test cases :)  
+Test:
+```
+python tests\test_cli.py
 ```
 
