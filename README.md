@@ -98,8 +98,14 @@ You can run the following, which covers all test cases :)
 python tests/test_cli.py
 ```
 The tests directory contains the test scripts for all the functions and sub-functions of this application.  
-Example:  
+Commands:  
 ```
 python tests/test_extract.py
 python tests/test_transform.py
+python tests/test_create_table_dict.py 
+python tests/test_extract_match_info.py
+python tests/test_extract_team_info.py
+python tests/test_point_analysis.py
+python tests/test_rank_table.py
+python tests/test_sort_point_table.py 
 ```
