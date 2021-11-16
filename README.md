@@ -1,5 +1,6 @@
 # rank
-A CLI application that produces a point table based on matches
+A CLI application that produces a point table based on matches.
+Supported OS: Linux  
 
 # how to run
 Clone the repository and run the following lines: 
@@ -10,21 +11,21 @@ rank -i <input_file.txt>
 
 # Application architecture  
 <p align="center">
-  <img src="https://github.com/m4tice/ecom/blob/main/assets/store_schema.png" width="600">
+  <img src="https://github.com/m4tice/rank/blob/main/assets/rank_structure.png" width="600">
 </p>
 
-# Website views
+# Extract  
 Homepage  
 <p align="center">
-  <img src="https://github.com/m4tice/ecom/blob/main/assets/homepage.PNG" width="600">
+  <img src="https://github.com/m4tice/rank/blob/main/assets/extract.png" width="600">
 </p>
 
-Item view  
+# Transforms  
 <p align="center">
-  <img src="https://github.com/m4tice/ecom/blob/main/assets/view_item.PNG" width="600">
+  <img src="https://github.com/m4tice/rank/blob/main/assets/transform.png" width="600">
 </p>
 
-Checkout  
+# Load  
 <p align="center">
-  <img src="https://github.com/m4tice/ecom/blob/main/assets/checkout.PNG" width="600">
+  <img src="https://github.com/m4tice/rank/blob/main/assets/load.png" width="600">
 </p>
