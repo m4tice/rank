@@ -70,5 +70,11 @@ Test:
 rank -i data\unknown.txt  
 ```
 * Empty file: when user tries to input an empty text file.  
+```
+rank -i data\sample-input-empty.txt  
+```
 * Wrong data format: when user tries to input text file with wrong data format.  
+```
+rank -i data\sample-input-wrong-format.txt  
+```
 
