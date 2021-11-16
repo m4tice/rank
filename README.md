@@ -37,7 +37,7 @@ The sub-functions of this phase:
   <img src="https://github.com/m4tice/rank/blob/main/assets/extract.png" width="700">
 </p>
 
-# Transforms  
+# Transform  
 The phase mainly deals with data transformation. The goal is to create a point table and add the points based on matches and predefined rule, and rank them from high to low, alphabetically.  
 
 The workflow is as follow:
