@@ -18,7 +18,7 @@ rank -i data\sample-input.txt
 ```
 
 # Application architecture  
-The application is designed to be a ETL pipeline with 3 phases:
+The application is designed to be an ETL pipeline with 3 phases:
 * Extract: extract data from the input text file and put them into a list  
 * Transform: transform the extracted data to the required format  
 * Load: load the result into a text file  
