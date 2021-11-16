@@ -1,6 +1,7 @@
 # rank
 A CLI application that produces a point table based on matches.  
 Supported OS: **Linux** only  
+Detailed instruction with images at: https://github.com/m4tice/rank
 
 # Project architecture
     .
