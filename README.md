@@ -19,9 +19,9 @@ rank -i data\sample-input.txt
 
 # Application architecture  
 The application is designed to be an ETL pipeline with 3 phases:
-* *Extract*: extract data from the input text file and put them into a list  
-* *Transform*: transform the extracted data to the required format  
-* *Load*: load the result into a text file  
+* *Extract*: extract data from the input text file and put them into a list.  
+* *Transform*: transform the extracted data to the required format.  
+* *Load*: load the result into a text file.  
 
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/rank_structure.png" width="700">
@@ -64,17 +64,17 @@ This is the final phase, used to export the sorted rank table into a text file n
 
 # Tests
 The application is able to handle the following exception:
-* Non-exsisted file: when user tries to input a non-exsisted file.  
+* *Non-exsisted file*: when user tries to input a non-exsisted file.  
 Test:
 ```
 rank -i data\unknown.txt  
 ```
-* Empty file: when user tries to input an empty text file.  
+* *Empty file*: when user tries to input an empty text file.  
 Test:
 ```
 rank -i data\sample-input-empty.txt  
 ```
-* Wrong data format: when user tries to input text file with wrong data format.  
+* *Wrong data format*: when user tries to input text file with wrong data format.  
 Test:
 ```
 rank -i data\sample-input-wrong-format.txt  
