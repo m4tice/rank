@@ -31,7 +31,7 @@ The application is designed to be a ETL pipeline with 3 phases:
 The phase mainly deals with string manipulation. The goal is to transform the raw data into structured data (in form of rows and columns).  
 The sub functions of this phase:
 * ```extract_match_info()```: used to split teams' names and scores and put into a list.  
-* ```extract_team_info()```:  used to support ```extract_match_info()```.  
+* ```extract_team_info()```:  used to support ```extract_match_info()```.  \
 
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/extract.png" width="700">
@@ -61,3 +61,14 @@ This is the final phase, used to export the sorted rank table into a text file n
 <p align="center">
   <img src="https://github.com/m4tice/rank/blob/main/assets/load.png" width="700">
 </p>
+
+# Tests
+The application is able to handle the following exception:
+* Non-exsisted file: when user tries to input a non-exsisted file.  
+Test:
+```
+rank -i data\unknown.txt  
+```
+* Empty file: when user tries to input an empty text file.  
+* Wrong data format: when user tries to input text file with wrong data format.  
+
