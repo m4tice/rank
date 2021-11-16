@@ -1,6 +1,6 @@
 # rank
 A CLI application that produces a point table based on matches.  
-Supported OS: Linux only  
+Supported OS: **Linux** only  
 
 # Project architecture
     .
